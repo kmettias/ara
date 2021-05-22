@@ -9,8 +9,7 @@
 // This unit is shared between all the functional units who can execute
 // predicated instructions.
 
-import ara_pkg::*; import rvv_pkg::*;
-module masku #(
+module masku import ara_pkg::*; import rvv_pkg::*; #(
     parameter  int  unsigned NrLanes = 0,
     parameter  type          vaddr_t = logic, // Type used to address vector register file elements
     // Dependant parameters. DO NOT CHANGE!

@@ -6,8 +6,8 @@
 // Description:
 // Ara's sequencer controls the ordering and the dependencies between the
 // parallel vector instructions in execution.
-import ara_pkg::*; import rvv_pkg::*;
-module ara_sequencer #(
+
+module ara_sequencer import ara_pkg::*; import rvv_pkg::*; #(
     // RVV Parameters
     parameter  int unsigned NrLanes = 1,          // Number of parallel vector lanes
     // Dependant parameters. DO NOT CHANGE!

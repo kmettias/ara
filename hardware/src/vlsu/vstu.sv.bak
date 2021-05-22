@@ -12,8 +12,8 @@
 // Description:
 // This is Ara's vector store unit. It sends transactions on the W bus,
 // upon receiving vector memory operations.
-import ara_pkg::*; import rvv_pkg::*;
-module vstu #(
+
+module vstu import ara_pkg::*; import rvv_pkg::*; #(
     parameter  int  unsigned NrLanes = 0,
     parameter  type          vaddr_t = logic,  // Type used to address vector register file elements
     // AXI Interface parameters

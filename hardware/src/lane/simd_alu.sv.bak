@@ -5,8 +5,8 @@
 // Author: Matheus Cavalcante <matheusd@iis.ee.ethz.ch>
 // Description:
 // Ara's SIMD ALU, operating on elements 64-bit wide, and generating 64 bits per cycle.
-import ara_pkg::*; import rvv_pkg::*;
-module simd_alu #(
+
+module simd_alu import ara_pkg::*; import rvv_pkg::*; #(
     // Dependant parameters. DO NOT CHANGE!
     localparam int  unsigned DataWidth = $bits(elen_t),
     localparam int  unsigned StrbWidth = DataWidth/8,

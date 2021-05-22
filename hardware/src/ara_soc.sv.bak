@@ -5,8 +5,8 @@
 // Author: Matheus Cavalcante <matheusd@iis.ee.ethz.ch>
 // Description:
 // Ara's SoC, containing Ariane, Ara, and a L2 cache.
-import axi_pkg::*; import ara_pkg::*;
-module ara_soc #(
+
+module ara_soc import axi_pkg::*; import ara_pkg::*; #(
     // RVV Parameters
     parameter  int           unsigned NrLanes      = 0, // Number of parallel vector lanes.
     // Support for floating-point data types

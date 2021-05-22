@@ -8,8 +8,8 @@
 // Ara's SIMD Multiplier, operating on elements 64-bit wide.
 // The parametric number of pipeline register determines the intrinsic latency of the unit.
 // Once the pipeline is full, the unit can generate 64 bits per cycle.
-import ara_pkg::*; import rvv_pkg::*;
-module simd_mul #(
+
+module simd_mul import ara_pkg::*; import rvv_pkg::*; #(
     parameter  int   unsigned NumPipeRegs  = 0,
     parameter  vew_e          ElementWidth = EW64,
     // Dependant parameters. DO NOT CHANGE!

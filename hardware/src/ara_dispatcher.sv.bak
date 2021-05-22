@@ -7,8 +7,8 @@
 // Ara's dispatcher interfaces Ariane's requests with the vector lanes.
 // It also acknowledges instructions back to Ariane, perhaps with a
 // response or an error message.
-import ara_pkg::*; import rvv_pkg::*;
-module ara_dispatcher #(
+
+module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
     parameter int           unsigned NrLanes    = 0,
     // Support for floating-point data types
     parameter fpu_support_e          FPUSupport = FPUSupportHalfSingleDouble

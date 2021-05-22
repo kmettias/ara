@@ -6,8 +6,8 @@
 // Description:
 // This unit generates transactions on the AR/AW buses, upon receiving vector
 // memory operations.
-import ara_pkg::*; import rvv_pkg::*;
-module addrgen #(
+
+module addrgen import ara_pkg::*; import rvv_pkg::*; #(
     parameter int  unsigned NrLanes      = 0,
     // AXI Interface parameters
     parameter int  unsigned AxiDataWidth = 0,

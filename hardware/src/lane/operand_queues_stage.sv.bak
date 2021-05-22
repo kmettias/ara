@@ -5,8 +5,8 @@
 // Author: Matheus Cavalcante <matheusd@iis.ee.ethz.ch>
 // Description:
 // This stage holds the operand queues, holding elements for the VRFs.
-import ara_pkg::*; import rvv_pkg::*;
-module operand_queues_stage #(
+
+module operand_queues_stage import ara_pkg::*; import rvv_pkg::*; #(
     // Support for floating-point data types
     parameter fpu_support_e FPUSupport = FPUSupportHalfSingleDouble
   ) (

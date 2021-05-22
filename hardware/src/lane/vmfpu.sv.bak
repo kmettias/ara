@@ -7,8 +7,7 @@
 // Description:
 // Ara's integer multiplier and floating-point unit.
 
-import ara_pkg::*; import rvv_pkg::*; import fpnew_pkg::*;
-module vmfpu #(
+module vmfpu import ara_pkg::*; import rvv_pkg::*; import fpnew_pkg::*; #(
     parameter  int           unsigned NrLanes    = 0,
     // Support for floating-point data types
     parameter  fpu_support_e          FPUSupport = FPUSupportHalfSingleDouble,

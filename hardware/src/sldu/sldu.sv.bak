@@ -7,10 +7,9 @@
 // This is Ara's slide unit. It is responsible for running the vector slide (up/down)
 // instructions, which need access to the whole Vector Register File.
 
-import ara_pkg::*; import rvv_pkg::*;
-module sldu #(
+module sldu import ara_pkg::*; import rvv_pkg::*; #(
     parameter  int  unsigned NrLanes = 0,
-    parameter type vaddr_t = logic, // Type used to address vector register file elements
+    parameter  type          vaddr_t = logic, // Type used to address vector register file elements
     // Dependant parameters. DO NOT CHANGE!
     localparam int  unsigned DataWidth = $bits(elen_t), // Width of the lane datapath
     localparam int  unsigned StrbWidth = DataWidth/8,

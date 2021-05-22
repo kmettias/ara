@@ -7,8 +7,8 @@
 // This is the sequencer of one lane. It controls the execution of one vector
 // instruction within one lane, interfacing with the internal functional units
 // and with the main sequencer.
-import ara_pkg::*; import rvv_pkg::*; import cf_math_pkg::idx_width;
-module lane_sequencer #(
+
+module lane_sequencer import ara_pkg::*; import rvv_pkg::*; import cf_math_pkg::idx_width; #(
     parameter int unsigned NrLanes = 0
   ) (
     input  logic                                          clk_i,

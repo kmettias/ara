@@ -7,8 +7,8 @@
 // This is Ara's vector load/store unit. It is used exclusively for vector
 // loads and vector stores. There are no guarantees regarding concurrency
 // and coherence with Ariane's own load/store unit.
-import ara_pkg::*; import rvv_pkg::*;
-module vlsu #(
+
+module vlsu import ara_pkg::*; import rvv_pkg::*; #(
     parameter  int  unsigned NrLanes = 0,
     parameter  type          vaddr_t = logic,  // Type used to address vector register file elements
     // AXI Interface parameters

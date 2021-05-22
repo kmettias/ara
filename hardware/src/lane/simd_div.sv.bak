@@ -6,8 +6,8 @@
 // Description:
 // Ara's Serial Divider, operating on elements 64-bit wide.
 // The unit serializes the whole computation, so it cannot parallelize sub-64-bit arithmetic.
-import ara_pkg::*; import rvv_pkg::*;
-module simd_div #(
+
+module simd_div import ara_pkg::*; import rvv_pkg::*; #(
     // Dependant parameters. DO NOT CHANGE!
     localparam int  unsigned DataWidth = $bits(elen_t),
     localparam int  unsigned StrbWidth = DataWidth/8,

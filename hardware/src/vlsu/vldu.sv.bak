@@ -6,8 +6,8 @@
 // Description:
 // This is Ara's vector load unit. It receives transactions on the R bus,
 // upon receiving vector memory operations.
-import ara_pkg::*; import rvv_pkg::*;
-module vldu #(
+
+module vldu import ara_pkg::*; import rvv_pkg::*; #(
     parameter  int  unsigned NrLanes = 0,
     parameter  type          vaddr_t = logic,  // Type used to address vector register file elements
     // AXI Interface parameters

@@ -6,8 +6,8 @@
 // Description:
 // This is Ara's vector execution stage. This contains the functional units
 // of each lane, namely the ALU and the Multiplier/FPU.
-import ara_pkg::*; import rvv_pkg::*;
-module vector_fus_stage #(
+
+module vector_fus_stage import ara_pkg::*; import rvv_pkg::*; #(
     parameter  int           unsigned NrLanes    = 0,
     // Support for floating-point data types
     parameter  fpu_support_e          FPUSupport = FPUSupportHalfSingleDouble,

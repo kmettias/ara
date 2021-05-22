@@ -6,8 +6,8 @@
 // Description:
 // This is Ara's vector ALU. It is capable of executing integer operations
 // in a SIMD fashion, always operating on 64 bits.
-import ara_pkg::*; import rvv_pkg::*;
-module valu #(
+
+module valu import ara_pkg::*; import rvv_pkg::*; #(
     parameter  int  unsigned NrLanes   = 0,
     // Type used to address vector register file elements
     parameter  type          vaddr_t   = logic,

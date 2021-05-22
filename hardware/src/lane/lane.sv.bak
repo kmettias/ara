@@ -6,8 +6,8 @@
 // Description:
 // This is one of Ara's  lanes. It contains part of the vector register file
 // together with the execution units.
-import ara_pkg::*; import rvv_pkg::*;
-module lane #(
+
+module lane import ara_pkg::*; import rvv_pkg::*; #(
     parameter  int           unsigned NrLanes         = 1, // Number of lanes
     // Support for floating-point data types
     parameter  fpu_support_e          FPUSupport      = FPUSupportHalfSingleDouble,

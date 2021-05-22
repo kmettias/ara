@@ -7,8 +7,8 @@
 // This operand queue holds elements from the VRF until they are ready to be used
 // by the VRFs. This unit is also able to do widening, for instructions that
 // need it.
-import ara_pkg::*; import rvv_pkg::*; import cf_math_pkg::idx_width;
-module operand_queue #(
+
+module operand_queue import ara_pkg::*; import rvv_pkg::*; import cf_math_pkg::idx_width; #(
     parameter  int           unsigned BufferDepth    = 2,
     parameter  int           unsigned NrSlaves       = 1,
     // Support for floating-point data types
